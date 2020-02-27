@@ -83,10 +83,6 @@ Some other helpful notes:
 
 PRs are always welcome.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
 ## Authors
 
 * **Christopher McDonald** - *All work* - [Github](https://github.com/ChristopherMcDonald)
