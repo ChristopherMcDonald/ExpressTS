@@ -6,12 +6,12 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -r build",
-    "coverage": "nyc ts-mocha tests/*.ts",
+    "coverage": "nyc ts-mocha tests/*.ts --exit",
     "lint": "eslint ./{seeds,src,tests}/{*,**}.ts",
     "lint:fix": "eslint ./{seeds,src,tests}/{*,**}.ts --fix",
     "seed": "ts-node-dev seeds/index.ts",
     "start": "ts-node-dev --respawn src/server.ts",
-    "test": "ts-mocha tests/*.ts"
+    "test": "ts-mocha tests/*.ts --exit"
   },
   "author": "Christopher McDonald",
   "license": "GPLV3",

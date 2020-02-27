@@ -9,6 +9,11 @@ import { NotFoundError } from '../src/errors';
 
 chai.use(chaiAsPromised);
 
+/**
+ * This is just to demonstrate that we can test the 
+ * service layer directly. For a real project, you
+ * should both service layer and app layer tests
+ */
 describe('User Tests', () => {
   /**
      * Since the service layer is abstracted from anything
@@ -23,8 +28,8 @@ describe('User Tests', () => {
         FetchApp.then(() => { res(); }).catch((err) => rej(err));
       });
 
-      users.push(await getRepository(User).save(User.createUser('John Doe', 30)));
-      users.push(await getRepository(User).save(User.createUser('Jane Doe', 30)));
+      users.push(await getRepository(User).save(User.createUser('Arya Stark', 30)));
+      users.push(await getRepository(User).save(User.createUser('Neville Longbottom', 30)));
     });
 
     after(async () => {
