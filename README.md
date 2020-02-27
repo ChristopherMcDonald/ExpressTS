@@ -35,6 +35,7 @@ Provided the [.env](.env) is made, run the following command.
  
 ```
 npm run test
+# or npm run coverage 
 ```
 
 ### Static Code Analysis
