@@ -12,12 +12,13 @@ const sign = (payload: string | object | Buffer) => jwt.sign(payload, JWT_SECRET
 
 /**
  * Verifies and decodes the JWT provided using the <code>JWT_SECRET</code> property set in the env file
- * @param token 
+ * @param token to be verified
  */
 const verify = (token: string) => {
     try {
         return jwt.verify(token, JWT_SECRET) as Token;
     } catch (err) {
+        // intentionally hide error, consider logging this somewhere safe
         throw new UnauthorizedError('Invalid JWT Token');
     }
 }

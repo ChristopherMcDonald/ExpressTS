@@ -27,7 +27,6 @@ describe('App Tests', () => {
       expect(res).to.be.json;
     });
 
-
     it('should return 401 for empty Auth header requests', async () => {
       const res = await chai.request(app).get('/api/user');
       expect(res).to.have.status(401);

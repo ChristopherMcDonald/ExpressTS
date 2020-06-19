@@ -13,7 +13,7 @@ export default class EventService {
         const event = await getRepository(Event).findOne(id);
 
         if (!event) {
-            throw new NotFoundError(id, 'Event');
+            throw new NotFoundError('Event', id);
         }
 
         return event;

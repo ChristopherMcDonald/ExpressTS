@@ -1,8 +1,7 @@
 import Token from "../../types/token.type";
-import { Request } from 'express';
 
 /**
- * Adds a <code>token</code> attritube to Express' request object
+ * Adds a <code>token</code> and <code>trace</code> attritube to Express' request object
  */
 declare global {
     namespace Express {

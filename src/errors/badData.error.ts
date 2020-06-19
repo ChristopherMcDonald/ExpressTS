@@ -10,7 +10,7 @@ export default class BadDataError extends BaseError {
      * @param message describing what went wrong
      * @param code to be appended to 'error.bad-data.'
      */
-    constructor(message: string, code: string) {
-        super(message, `bad-data.${code}`, 400);
+    constructor(message: string, code: string, targets?: string[]) {
+        super(message, `bad-data.${code}`, 400, targets);
     }
 }

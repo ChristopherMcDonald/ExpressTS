@@ -10,7 +10,11 @@ export default class NotFoundError extends BaseError {
      * @param id used to find entity
      * @param entity trying to be found, to be appended to 'error.not-found.'
      */
-    constructor(id: string, entity: string) {
-        super(`${entity} with ID: ${id} was not found`, `not-found.${entity}`, 404);
+    constructor(entity: string, id: string) {
+        if (!id) {
+            super(`${entity} not found`, `not-found.${entity}`, 404);
+        } else {
+            super(`${entity} not found with ID: ${id}`, `not-found.${entity}`, 404);
+        }
     }
 }

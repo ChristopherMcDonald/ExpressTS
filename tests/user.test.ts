@@ -10,7 +10,7 @@ import { NotFoundError } from '../src/errors';
 chai.use(chaiAsPromised);
 
 /**
- * This is just to demonstrate that we can test the 
+ * This is just to demonstrate that we can test the
  * service layer directly. For a real project, you
  * should both service layer and app layer tests
  */
@@ -23,10 +23,7 @@ describe('User Tests', () => {
     const users = [];
 
     before(async () => {
-      await new Promise((res, rej) => {
-        // still fetch app though, so TypeORM can initialize
-        FetchApp.then(() => { res(); }).catch((err) => rej(err));
-      });
+      await FetchApp;
 
       users.push(await getRepository(User).save(User.createUser('Arya Stark', 30)));
       users.push(await getRepository(User).save(User.createUser('Neville Longbottom', 30)));

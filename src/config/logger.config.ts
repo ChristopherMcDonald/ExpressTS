@@ -4,7 +4,7 @@ import { DEBUG } from './settings.config';
 /**
  * Enabled dynamically, avoids complicated cross-platforms issues
  */
-logger.enable(DEBUG);
+if (DEBUG) logger.enable(DEBUG);
 
 /**
  * Exports a 'debug' logger, configured to log to the 'app' namespace

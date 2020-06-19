@@ -13,7 +13,7 @@ export default class UserService {
         const user = await getRepository(User).findOne(id);
 
         if (!user) {
-            throw new NotFoundError(id, 'User');
+            throw new NotFoundError('User', id);
         }
 
         return user;

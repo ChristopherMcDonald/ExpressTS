@@ -59,9 +59,9 @@ npm run start:multicore
 
 The structure can best be described in layers: models, services and routes.
 
-* [Routes](src/routes): are responsible for creating Express routers which transform HTTP request into service calls, which is usually done by pulling values out of the request object.
+* [Routes](src/routes): are responsible for creating Express routers which transform HTTP request into service calls, which is usually done by pulling values out of the request object. All strong-typing should happen here, so the `Service` knows the type they receive.
 * [Services](src/services): are responsible for accepting calls from the `Route` layer and preforming data validation on the input, and throwing protocol-agnostic errors (for example, if a User is not found, the service layer does not throw HttpNotFound, but rather NotFound)
-* [Models](src/models): are responsible for transforming objects into database entries, and querying those objects out (which in this projec, is done via [TypeORM](https://typeorm.io/))
+* [Models](src/models): are responsible for providing the means of accessing a Database where you define the schema but write very little code (which in this project, is done via [TypeORM](https://typeorm.io/))
 
 Some other helpful notes:
 
@@ -82,10 +82,6 @@ Some other helpful notes:
 ## Contributing
 
 PRs are always welcome.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 

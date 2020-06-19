@@ -18,5 +18,5 @@
     // "forceConsistentCasingInFileNames": true,  /* Disallow inconsistently-cased references to the same file. */
     "experimentalDecorators": true
   },
-  "exclude": ["./node_modules", "./tests"],
+  "exclude": ["./node_modules", "./tests", "./seeds"],
 }
